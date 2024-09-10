@@ -8,14 +8,13 @@ public class Employee {
 	
 	
 	public Employee() {
-		super();
 	}
 
 
-	public Employee(String name, Integer hours) {
-		super();
+	public Employee(String name, Integer hours, Double valuePerHour) {
 		this.name = name;
 		this.hours = hours;
+		this.valuePerHour = valuePerHour;
 	}
 
 
@@ -38,8 +37,17 @@ public class Employee {
 		this.hours = hours;
 	}
 	
-	public void payment(double amount) {
-		valuePerHour *= amount;
+	public Double getvaluePerHour() {
+		return valuePerHour;
+	}
+
+
+	public void setvaluePerHour(Double valuePerHour) {
+		this.valuePerHour = valuePerHour;
+	}
+	
+	public double payment() {
+		return hours * valuePerHour;
 	}
 	
 }
